@@ -1,0 +1,281 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jiya Kumar | Portfolio</title>
+  
+  <link rel="stylesheet" href="style.css">
+  </head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Jiya Kumar</div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Hello, I'm <span>Jiya Kumar</span></h1>
+      <p>I am a passionate Computer Science Student</p>
+      <a href="#projects" class="btn">View My Work</a>
+      <a href="./jiya.pdf" class="btn resume-btn" download>Download Resume</a>
+
+    </div>
+    <div class="hero-img">
+      <img src="./jiyaiamge2.jpeg" alt="Jiya Kumar">
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>
+    Hi! I'm Jiya Kumar, a passionate and dedicated programmer with a strong foundation in C, C++, and Python. I enjoy solving real-world problems and bringing ideas to life through code.
+  </p>
+  <p>
+    I am currently expanding my skills in the field of <strong>Machine Learning</strong>. I have been actively learning concepts like supervised and unsupervised learning, model evaluation, and data preprocessing using the <strong>Scikit-learn</strong> library.
+  </p>
+  <p>
+    Alongside my studies, I have also been working on hands-on projects that apply these machine learning techniques to real datasets, helping me gain practical experience in building predictive models and analyzing data trends.
+  </p>
+</section>
+       <div class="about-cards">
+        <div class="card">
+          <h3>Education</h3><ul>
+         <li> <p> B.Tech in Computer Science - CGC Landran (2023-2027)</p></li>
+          <li><p> Intermediate - Rayat International School(2021-2022), 89%</p></li>
+          <li><p> Matriculation - Rayat International School(2019-2020), 94.6%</p></li>
+        </ul></div>
+        <div class="card">
+          <h3>Projects</h3>
+          <ul>
+          <li><p> Heart Disease Prediction Model</p></li>
+          <li><p> Resume Screening Model</p></li>
+        </ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="projects" id="projects">
+    <div class="container">
+      <h2>My Projects</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <img src="./heartdiseaseimage2.jpeg" alt="Heart Disease Prediction" />
+          <div class="project-info">
+            <h3>Heart Disease Prediction</h3>
+            <p>
+    This machine learning project predicts the likelihood of a person having heart disease based on medical parameters such as age, sex, blood pressure, cholesterol levels, chest pain type, and more.
+  </p>
+  <p>
+    I used the <strong>Scikit-learn</strong> library to build and evaluate multiple models including Logistic Regression, Decision Trees, and Random Forest. After comparing performance metrics like accuracy, precision, and recall, the Random Forest model achieved the best results.
+  </p>
+  <p>
+    The model was trained on the UCI Heart Disease dataset and includes essential steps like data preprocessing, feature scaling, train-test splitting, and model tuning.
+  </p>
+  <p><strong>Technologies Used:</strong> Python, Scikit-learn, Pandas, NumPy, Matplotlib</p>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="./resumescreeningimage2.png" alt="Resume Screening" />
+          <div class="project-info">
+            <h3>Resume Screening</h3>
+            <p>
+    This machine learning project automates the process of shortlisting resumes based on required skills and job roles. It classifies resumes into relevant job categories such as Data Scientist, Web Developer, or Software Engineer.
+  </p>
+  <p>
+    I used Natural Language Processing (NLP) techniques to clean and vectorize resume text using methods like tokenization, TF-IDF, and stopword removal. The processed text data was then fed into machine learning models such as Naive Bayes and Support Vector Machines (SVM) using <strong>Scikit-learn</strong>.
+  </p>
+  <p>
+    The model helps streamline the recruitment process by reducing manual effort and improving the consistency of resume evaluations.
+  </p>
+  <p><strong>Technologies Used:</strong> Python, Scikit-learn, Pandas, NLTK, TF-IDF</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="skills" id="skills">
+    <div class="container">
+      <h2>My Skills</h2>
+      <div class="skills-grid">
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">C</div>
+        <div class="skill">C++</div>
+        <div class="skill">Python</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2>Contact Me</h2>
+        <form action="https://formsubmit.co/kumarrajesh1975.rk@gmail.com" method="POST" class="contact-form">
+
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <input type="hidden" name="_captcha" value="false">
+        
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </div>
+  </section>
+  <!-- Chatbot Button -->
+<div id="chatbot-toggle">💬</div>
+
+<!-- Chatbot Container -->
+<div id="chatbot">
+  <div id="chatbot-header">Chat with me! <span id="chatbot-close">×</span></div>
+  <div id="chatbot-messages"></div>
+  <div class="chat-input-wrapper">
+  <input type="text" id="chatbot-input" placeholder="Type a message..." />
+  <button id="mic-btn">🎤</button>
+</div>
+
+</div>
+
+<!-- Chatbot Script -->
+<script>
+  const toggleBtn = document.getElementById("chatbot-toggle");
+  const chatbot = document.getElementById("chatbot");
+  const closeBtn = document.getElementById("chatbot-close");
+  const input = document.getElementById("chatbot-input");
+  const messages = document.getElementById("chatbot-messages");
+
+  toggleBtn.onclick = () => chatbot.style.display = "flex";
+  closeBtn.onclick = () => chatbot.style.display = "none";
+
+  input.addEventListener("keypress", function (e) {
+    if (e.key === "Enter") {
+      const userMsg = input.value.trim();
+      if (userMsg === "") return;
+
+      appendMessage("You", userMsg);
+      respond(userMsg.toLowerCase());
+      input.value = "";
+    }
+  });
+
+  function appendMessage(sender, msg) {
+    const msgDiv = document.createElement("div");
+    msgDiv.classList.add("chat-msg");
+    msgDiv.innerHTML = `<strong>${sender}:</strong> ${msg}`;
+    messages.appendChild(msgDiv);
+    messages.scrollTop = messages.scrollHeight;
+  }
+
+  
+
+    
+  function respond(msg) {
+    let response = "I'm not sure how to respond to that.";
+
+    if (msg.includes("hello") || msg.includes("hi")) {
+      response = "Hi there! 😊 How can I assist you today?";
+    } else if (msg.includes("how are you")) {
+      response = "I'm doing great! Thanks for asking. How about you?";
+    } else if (msg.includes("your name")) {
+      response = "I'm Jiya's friendly chatbot assistant 🤖";
+    } else if (msg.includes("projects")) {
+      response = "Jiya has worked on Heart Disease Prediction and Resume Screening using machine learning.";
+    } else if (msg.includes("skills")) {
+      response = "Jiya is skilled in HTML, CSS, JavaScript, Python, C, and C++.";
+    } else if (msg.includes("education")) {
+      response = "Jiya studied at Rayat International School and is currently pursuing BTech at CGC Landran (2023–2027).";
+    } else if (msg.includes("email") || msg.includes("contact")) {
+      response = "You can contact Jiya through the contact form on this website.";
+    } else if (msg.includes("resume")) {
+      response = "You can download Jiya's resume by clicking the 'Download Resume' button.";
+    } else if (msg.includes("hobby") || msg.includes("hobbies")) {
+      response = "Jiya enjoys working on AI projects, learning new tech, and coding challenges!";
+    } else if (msg.includes("bye") || msg.includes("see you")) {
+      response = "Goodbye! 👋 Have a great day!";
+    } else if (msg.includes("thanks") || msg.includes("thank you")) {
+      response = "You're welcome! 😊";
+    }
+
+    setTimeout(() => appendMessage("Bot", response), 500);
+  
+
+
+
+
+}
+const micBtn = document.getElementById("mic-btn");
+  const recognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+  if (recognition) {
+    const speech = new recognition();
+    speech.continuous = false;
+    speech.lang = "en-US";
+
+    micBtn.onclick = () => {
+      speech.start();
+    };
+
+    speech.onresult = (event) => {
+      const transcript = event.results[0][0].transcript;
+      appendMessage("You", transcript);
+      respond(transcript.toLowerCase());
+    };
+  } else {
+    micBtn.disabled = true;
+    micBtn.innerText = "❌";
+    micBtn.title = "Speech not supported";
+  }
+
+  // Text-to-Speech (Bot talks back)
+  function speak(msg) {
+    const speech = new SpeechSynthesisUtterance();
+    speech.text = msg;
+    speech.lang = "en-US";
+    window.speechSynthesis.speak(speech);
+  }
+
+  // Update respond() to speak too
+  function respond(msg) {
+    let response = "I'm not sure how to respond to that.";
+
+    if (msg.includes("hello") || msg.includes("hi")) {
+      response = "Hi there! 😊 How can I assist you today?";
+    } else if (msg.includes("how are you")) {
+      response = "I'm doing great! Thanks for asking. How about you?";
+    } else if (msg.includes("your name")) {
+      response = "I'm Jiya's friendly chatbot assistant 🤖";
+    } else if (msg.includes("projects")) {
+      response = "Jiya has worked on Heart Disease Prediction and Resume Screening using machine learning.";
+    } else if (msg.includes("skills")) {
+      response = "Jiya is skilled in HTML, CSS, JavaScript, Python, C, and C++.";
+    } else if (msg.includes("education")) {
+      response = "Jiya studied at Rayat International School and is currently pursuing BTech at CGC Landran (2023–2027).";
+    } else if (msg.includes("email") || msg.includes("contact")) {
+      response = "You can contact Jiya through the contact form on this website.";
+    } else if (msg.includes("resume")) {
+      response = "You can download Jiya's resume by clicking the 'Download Resume' button.";
+    } else if (msg.includes("hobby") || msg.includes("hobbies")) {
+      response = "Jiya enjoys working on AI projects, learning new tech, and coding challenges!";
+    } else if (msg.includes("bye") || msg.includes("see you")) {
+      response = "Goodbye! 👋 Have a great day!";
+    } else if (msg.includes("thanks") || msg.includes("thank you")) {
+      response = "You're welcome! 😊";
+    }
+
+    setTimeout(() => {
+      appendMessage("Bot", response);
+      speak(response);  // Bot speaks here
+    }, 500);
+  }
+</script>
+
+
+</body>
+</html>
